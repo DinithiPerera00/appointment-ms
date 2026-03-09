@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - User Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="form-page">
+    <div class="container">
+        <header>
+            <h1>User Registration</h1>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </header>
+        
+        <div class="card form-card">
+            <h2>Create Account</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="patientName">Full Name *</label>
+                    <input type="text" id="patientName" name="patientName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required minlength="6">
+                </div>
+                
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number *</label>
+                    <input type="tel" id="contactNumber" name="contactNumber" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" name="age" required min="1" max="120">
+                </div>
+                
+                <div class="form-group">
+                    <label for="role">Role *</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select Role</option>
+                        <option value="PATIENT">Patient</option>
+                        <option value="DOCTOR">Doctor</option>
+                        <option value="ADMIN">Admin</option>
+                    </select>
+                </div>
+                
+                <div id="message" class="message"></div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form>
+            
+            <p class="text-center" style="margin-top: 20px;">
+                Already have an account? <a href="login.html">Login here</a>
+            </p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
